@@ -1,0 +1,144 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Client",
+      "role": "Regular User",
+      "text": "Excellent service! Fast request processing, user-friendly interface, low commissions. Thank you for quality exchange!",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "name": "Client",
+      "role": "Service User",
+      "text": "Reliable exchange service – I've conducted several transactions, everything is clear and problem-free.",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "name": "Client",
+      "role": "New User",
+      "text": "Best rate! I was looking for the most profitable exchange – here is the top rate!",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "name": "Client",
+      "role": "Service User",
+      "text": "Super fast support – they responded in a couple of minutes, helped me figure everything out.",
+      "rating": 4.5
+    },
+    {
+      "id": 5,
+      "name": "Client",
+      "role": "Regular User",
+      "text": "The exchange went instantly! Very glad I chose this service.",
+      "rating": 5
+    },
+    {
+      "id": 6,
+      "name": "Client",
+      "role": "Service User",
+      "text": "Safe and convenient – they work according to regulations, everything is clean and transparent.",
+      "rating": 5
+    },
+    {
+      "id": 7,
+      "name": "Client",
+      "role": "Regular User",
+      "text": "Always on time – payments come without delays, I recommend!",
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "name": "Client",
+      "role": "Regular User",
+      "text": "I use it constantly – they have never let me down, excellent exchange service!",
+      "rating": 5
+    },
+    {
+      "id": 9,
+      "name": "Client",
+      "role": "Service User",
+      "text": "They work around the clock – I exchanged at night without any problems, thank you!",
+      "rating": 4.5
+    },
+    {
+      "id": 10,
+      "name": "Client",
+      "role": "New User",
+      "text": "Nice interface – convenient, clear, everything is in its place.",
+      "rating": 4.5
+    },
+    {
+      "id": 11,
+      "name": "Client",
+      "role": "Regular User",
+      "text": "I recommend! It's not the first time I exchange crypto, always satisfied with the result.",
+      "rating": 5
+    },
+    {
+      "id": 12,
+      "name": "Client",
+      "role": "Service User",
+      "text": "Honest service – no hidden fees, everything is transparent.",
+      "rating": 5
+    },
+    {
+      "id": 13,
+      "name": "Client",
+      "role": "Regular User",
+      "text": "Top exchange service – speed, quality, reliability at the highest level!",
+      "rating": 5
+    },
+    {
+      "id": 14,
+      "name": "Client",
+      "role": "New User",
+      "text": "Good reputation – friends recommended it, and they weren't wrong!",
+      "rating": 4.5
+    },
+    {
+      "id": 15,
+      "name": "Client",
+      "role": "Service User",
+      "text": "Always have the necessary crypto available – no need to wait, the exchange was conducted immediately.",
+      "rating": 5
+    },
+    {
+      "id": 16,
+      "name": "Client",
+      "role": "New User",
+      "text": "No hassle – I just submitted a request and received the money.",
+      "rating": 4.5
+    },
+    {
+      "id": 17,
+      "name": "Client",
+      "role": "Regular User",
+      "text": "They work precisely – no deception, everything as promised.",
+      "rating": 5
+    },
+    {
+      "id": 18,
+      "name": "Client",
+      "role": "Service User",
+      "text": "Low commissions – compared to other exchange services, the best conditions here.",
+      "rating": 5
+    },
+    {
+      "id": 19,
+      "name": "Client",
+      "role": "New User",
+      "text": "Excellent support – if I didn't understand something, they helped immediately.",
+      "rating": 4.5
+    },
+    {
+      "id": 20,
+      "name": "Client",
+      "role": "Regular User",
+      "text": "Already a year with you! Not a single bad experience, only positive impressions!",
+      "rating": 5
+    }
+  ]
+}
