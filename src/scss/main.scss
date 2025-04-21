@@ -1,0 +1,37 @@
+@use "./sections/home";
+@use "./sections/transaction";
+@use "./sections/about";
+@use "./sections/contact";
+@use "./sections/testimonial";
+@use "./sections/frequentlyQA";
+@use "./sections/animations";
+
+@use "./media/sections/about-media";
+@use "./media/sections/contact-media";
+@use "./media/sections/frequentlyQA-media";
+@use "./media/sections/home-media";
+@use "./media/sections/testimonial-media";
+@use "./media/sections/transaction-media";
+
+@use "./header.scss";
+@use "./media/header-media";
+
+@use "./footer.scss";
+@use "./media/footer-media";
+
+@use "./auth/auth";
+@use "./auth/login-form";
+@use "./auth/register-form";
+
+@use "./pages/profile.scss";
+@use "./media/pages/profile-media";
+
+@use "./pages/payment.scss";
+@use "./media/pages/payment-media";
+
+@use "./pages/admin.scss";
+@use "./media/pages/admin-media";
+
+.section {
+  font-family: "Montserrat", sans-serif;
+}

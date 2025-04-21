@@ -1,0 +1,71 @@
+@media (max-width: 1070px) {
+  .crypto-converter {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    padding: 20px;
+
+    &__form {
+      flex-direction: row;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    &__section {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .crypto-converter {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    padding: 20px;
+
+    &__form {
+      gap: 2rem;
+      align-items: center;
+    }
+
+    &__section {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .crypto-selector {
+    &__dropdown {
+      width: 250px;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .crypto-converter {
+    padding: 16px;
+
+    &__form {
+      flex-direction: column;
+    }
+
+    &__section {
+      max-width: 280px;
+    }
+
+    &__submit {
+      width: 100%;
+      max-width: 280px;
+      height: 45px;
+    }
+  }
+
+  .wallet-input {
+    &__save {
+      padding: 8px 0;
+    }
+  }
+}

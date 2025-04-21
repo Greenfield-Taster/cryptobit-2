@@ -1,0 +1,123 @@
+@use "sass:color";
+
+.footer {
+  background-color: #000000;
+  width: 100%;
+  padding: 32px 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: "Montserrat", sans-serif;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  &__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #f7b614;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 24px;
+    cursor: pointer;
+
+    button {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      position: relative;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #f7b614;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        color: #f7b614;
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    border-top: 1px solid rgb(255 255 255 / 0.1);
+  }
+
+  &__copyright {
+    color: #808080;
+    font-size: 14px;
+
+    span {
+      color: #f7b614;
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__payments {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    img {
+      height: 24px;
+      width: auto;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .main-content {
+    flex: 1;
+  }
+}

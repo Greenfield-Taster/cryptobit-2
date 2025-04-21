@@ -1,0 +1,91 @@
+@media screen and (max-width: 1200px) {
+  .section {
+    &__transaction {
+      &__header {
+        h2 {
+          font-size: 2.2rem;
+        }
+      }
+
+      &__content {
+        gap: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .section {
+    &__transaction {
+      &__header {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      &__content {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+
+        &__cryptocurrencies {
+          display: flex;
+          justify-content: center;
+        }
+
+        &__exchangeForm {
+          width: 100%;
+          flex: 1 1 auto;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    &__transaction {
+      min-height: auto;
+
+      &__header {
+        margin-bottom: 2rem;
+
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section {
+    &__transaction {
+      padding: 10px;
+
+      &__header {
+        h3 {
+          font-size: 0.9rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .section {
+    &__transaction {
+      &__header {
+        h2 {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

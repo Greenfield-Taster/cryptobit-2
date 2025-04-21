@@ -1,0 +1,206 @@
+@use "sass:color";
+
+.header {
+  background-color: #000000;
+  padding: 1rem 0;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgb(255 255 255 / 0.1);
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__right-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__nav {
+    margin-left: 0 auto;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 1.5rem;
+    }
+
+    &-item {
+      display: flex;
+    }
+
+    &-link {
+      color: #ffffff;
+      background: none;
+      border: none;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      padding: 0.5rem 0;
+      display: inline-block;
+
+      &:hover {
+        color: #ffb800;
+      }
+    }
+  }
+
+  .language-switcher {
+    position: relative;
+
+    &__current {
+      background: none;
+      border: 1px solid #ffb800;
+      color: #ffffff;
+      padding: 0.5rem 2rem 0.5rem 0.8rem;
+      border-radius: 4px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0.8rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #ffb800;
+      }
+
+      &:hover {
+        background-color: #ffb800;
+        color: #000000;
+
+        &:after {
+          border-top-color: #000000;
+        }
+      }
+    }
+
+    &__dropdown {
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      left: -1.5rem;
+      background-color: #1a1a1a;
+      border: 1px solid #ffb800;
+      border-radius: 4px;
+      overflow: hidden;
+      z-index: 1000;
+      min-width: 120px;
+
+      button {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: #ffb800;
+          color: #000000;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgb(255 255 255 / 0.1);
+        }
+      }
+    }
+  }
+
+  &__register-btn {
+    background-color: #ffb800;
+    color: #000000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: color.scale(#ffb800, $lightness: -10%);
+    }
+  }
+
+  &__admin-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #e6e6e6;
+    }
+  }
+
+  &__profile-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffb800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+
+    &:hover {
+      background-color: color.scale(#ffb800, $lightness: -10%);
+      transform: scale(1.05);
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
