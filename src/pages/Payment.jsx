@@ -12,6 +12,75 @@ import "../scss/main.scss";
 import walletIcon from "../assets/images/wallet.png";
 import copyIcon from "../assets/images/copy.png";
 
+const WALLET_ADDRESSES = {
+  bitcoin: {
+    address: "bc1qrm902nf5kanqlysfklfq82xpe3ut42juqy0ll5",
+    network: "BTC",
+  },
+  usdt: {
+    address: "TRoVZ2R8fmKYLACU86ypsWF3TjRLxsnHyg",
+    network: "TRC20",
+  },
+  ethereum: {
+    address: "0x5b37cB32C7861fa43882E2577B9277236Ab6b57E",
+    network: "ETH",
+  },
+  solana: {
+    address: "BUyAGgdtY3bsuJXeiqhHWT7wQt9J17NvKRd3ZDpoHCJB",
+    network: "SOL",
+  },
+  xrp: {
+    address: "rhLWkxbd76tiAJcndkFHWivgoKPBd9kF32",
+    network: "XRP",
+  },
+  binancecoin: {
+    address: "0x5b37cB32C7861fa43882E2577B9277236Ab6b57E",
+    network: "BNB Smart Chain",
+  },
+  dogecoin: {
+    address: "DU6r5QH5jEsff9Pdeqoy1QrUydJUwTtF1K",
+    network: "DOGE",
+  },
+  "usd-coin": {
+    address: "TRoVZ2R8fmKYLACU86ypsWF3TjRLxsnHyg",
+    network: "TRON",
+  },
+  cardano: {
+    address:
+      "addr1qxd70e6gj4lgxmr6hx9xed2wfwwfkvhldvqnjvl6hherwxmm8qeuyelknr0djphq220z2d69ahjg2und34xc6p4ln7wsh6jnsj",
+    network: "ADA",
+  },
+  "staked-ether": {
+    address: "BUyAGgdtY3bsuJXeiqhHWT7wQt9J17NvKRd3ZDpoHCJB",
+    network: "Lido",
+  },
+  "avalanche-2": {
+    address: "0x5b37cB32C7861fa43882E2577B9277236Ab6b57E",
+    network: "AVAX",
+  },
+  tron: {
+    address: "TRoVZ2R8fmKYLACU86ypsWF3TjRLxsnHyg",
+    network: "TRON",
+  },
+  "ton-token": {
+    address: "TRoVZ2R8fmKYLACU86ypsWF3TjRLxsnHyg",
+    network: "TRON",
+  },
+  stellar: {
+    address: "GD33EPD6LEBREX2DJCLKZW244DEYSL3S5I55F6O3MIU7FGY47XM5CFWB",
+    network: "XLM",
+  },
+  "shiba-inu": {
+    address: "0x5b37cB32C7861fa43882E2577B9277236Ab6b57E",
+    network: "ETH",
+  },
+};
+
+const DEFAULT_WALLET = {
+  address: "TRoVZ2R8fmKYLACU86ypsWF3TjRLxsnHyg",
+  network: "TRC20",
+};
+
 function Payment() {
   const { orderId } = useParams();
   const location = useLocation();
@@ -28,6 +97,10 @@ function Payment() {
   const paymentData =
     location.state ||
     JSON.parse(localStorage.getItem(`payment_data_${orderId}`));
+
+  const walletData = paymentData?.fromCrypto
+    ? WALLET_ADDRESSES[paymentData.fromCrypto.toLowerCase()] || DEFAULT_WALLET
+    : DEFAULT_WALLET;
 
   useEffect(() => {
     if (location.state) {
@@ -65,7 +138,7 @@ function Payment() {
 
   const handleCopyWallet = async () => {
     try {
-      await navigator.clipboard.writeText(paymentData.recipientWallet);
+      await navigator.clipboard.writeText(walletData.address);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
@@ -194,7 +267,7 @@ function Payment() {
 
             <div className="form-group">
               <label>{t("payment.formLabel")}</label>
-              <div className="form-value">TRC20</div>
+              <div className="form-value">{walletData.network}</div>
             </div>
 
             <div className="form-group">
@@ -203,9 +276,7 @@ function Payment() {
                 className="form-value wallet-field"
                 onClick={handleCopyWallet}
               >
-                <span className="wallet-address">
-                  {paymentData.recipientWallet}
-                </span>
+                <span className="wallet-address">{walletData.address}</span>
                 <img src={copyIcon} alt="copy" className="copy-icon" />
                 {copied && (
                   <span className="copy-notification">{t("payment.copy")}</span>
