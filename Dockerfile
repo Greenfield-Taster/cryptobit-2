@@ -19,8 +19,8 @@ RUN npm run build
 # Устанавливаем простой HTTP сервер для раздачи статики
 RUN npm install -g serve
 
-# Открываем порт (Cloud Run автоматически установит PORT=8080)
+# Открываем порт
 EXPOSE $PORT
 
-# Запускаем сервер с портом из переменной окружения
-CMD ["sh", "-c", "serve -s build -l $PORT"]
+# Запускаем сервер с папкой dist (не build!)
+CMD ["sh", "-c", "serve -s dist -l $PORT"]
