@@ -1,5 +1,5 @@
 # Используем официальный образ Node.js
-FROM node:18-alpine
+FROM node:20-alpine
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
@@ -19,8 +19,8 @@ RUN npm run build
 # Устанавливаем простой HTTP сервер для раздачи статики
 RUN npm install -g serve
 
-# Открываем порт 3000
-EXPOSE 3000
+# Открываем порт (Cloud Run автоматически установит PORT=8080)
+EXPOSE $PORT
 
-# Запускаем сервер с собранным приложением
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Запускаем сервер с портом из переменной окружения
+CMD ["sh", "-c", "serve -s build -l $PORT"]
