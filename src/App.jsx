@@ -33,6 +33,10 @@ import PromoCodeManagement from "./admin/PromoCodeManagement";
 import "./scss/app.scss";
 
 function App() {
+  console.log("VITE_API_URL:", import.meta.env.VITE_API_URL);
+  console.log("VITE_API_BOT_URL:", import.meta.env.VITE_API_BOT_URL);
+  console.log("All env vars:", import.meta.env);
+
   const aboutRef = useRef(null);
   const transactionRef = useRef(null);
   const homeRef = useRef(null);
