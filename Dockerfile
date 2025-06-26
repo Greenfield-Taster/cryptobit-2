@@ -22,5 +22,5 @@ RUN npm install -g serve
 # Открываем порт
 EXPOSE $PORT
 
-# Запускаем сервер с папкой dist (не build!)
+# Запускаем сервер с папкой dist
 CMD ["sh", "-c", "serve -s dist -l $PORT"]
