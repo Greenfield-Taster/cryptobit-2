@@ -142,7 +142,7 @@ function Payment() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      setLocalError(t("payment.copyError"));
+      setLocalError(t("payment.copyError"), err);
       setTimeout(() => setLocalError(null), 3000);
     }
   };
